@@ -17,7 +17,3 @@ COPY --from=build /app/build/libs/*.jar app.jar
 EXPOSE 8080
 
 ENTRYPOINT ["sh", "-c", "java -Dserver.port=${PORT:-8080} -jar app.jar"]
-
-git add Dockerfile
-git commit -m "Add Dockerfile for Render"
-git push -u origin main
