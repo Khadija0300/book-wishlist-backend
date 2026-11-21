@@ -1,12 +1,23 @@
 package com.example.bookwishlist.model;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
+@Entity
 public class WishlistBook {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String author;
     private String genre;
     private String priority;
     private boolean purchased;
+
+    public WishlistBook() {
+    }
 
     public Long getId() {
         return id;
